@@ -19,7 +19,7 @@ export default class Home extends React.Component {
     navigate('Login');
   }
   componentDidMount(){
-    axios("http://10.2.20.155:5000/articles/trending")
+    axios("http://localhost:5000/articles/trending")
     .then((result)=>{
         let articles = result.data.map((article  ,    index)=>{
             if(index > 5){

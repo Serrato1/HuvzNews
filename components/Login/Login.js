@@ -38,7 +38,7 @@ export default class Login extends React.Component {
   authenticate = ()=>{
     const navigate = this.props.navigation.navigate ; 
     console.log("'authenticate' method called");
-    axios.post('http://10.2.20.155:5000/login',{
+    axios.post('http://localhost:5000/login',{
       username : this.state.username,
       password : this.state.password
     })

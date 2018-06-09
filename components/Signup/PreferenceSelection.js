@@ -21,7 +21,7 @@ export default class Deck extends React.Component {
       this.setState({selection});
     }else if(selection.length >= 5){
       console.log("[PREFERENCE SELECTION] Selection Message : Can No Longer Select , MAX LIMIT REACHED ");
-      axios.post('http://10.2.20.155:5000/signup/preference',{
+      axios.post('http://localhost:5000/signup/preference',{
         options :    `${this.state.selection}`,
         username :  `${this.props.navigation.state.params.username}`
       })

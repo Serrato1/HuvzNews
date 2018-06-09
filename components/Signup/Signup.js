@@ -27,7 +27,7 @@ export default class Signup extends React.Component {
     let status = false;
     let msg = 'default msg';
     if(username !== '' && password !== ''){
-        axios.post('http://10.2.20.155:5000/signup',{
+        axios.post('http://localhost:5000/signup',{
             username ,
             password
         })

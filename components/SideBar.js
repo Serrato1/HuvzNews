@@ -15,7 +15,7 @@ export default class SideBar extends React.Component {
   }
   topicSelected = (topic)=>{
     console.log("Selected", topic);
-    axios.post(`http://10.2.20.155:5000/update/topic`, {
+    axios.post(`http://localhost:5000/update/topic`, {
       topic : topic
     })
     .then(({data})=>{

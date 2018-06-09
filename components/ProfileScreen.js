@@ -28,7 +28,7 @@ export default class ProfileScreen extends React.Component {
   changePassword = ()=>{
     console.log('changing password');
       let userId = this.props.navigation.getParam('userId' , 56);
-      axios.post('http://10.2.20.155:5000/update/password',{
+      axios.post('http://localhost:5000/update/password',{
         user_id : userId,
         password : this.state.password
       })

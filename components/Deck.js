@@ -17,7 +17,7 @@ export default class Deck extends React.Component {
   componentDidMount(){
     let userId = this.props.navigation.getParam('userId' , 56);
     console.log("[DECK] User Id : ", userId);
-    axios(`http://10.2.20.155:5000/articles/${userId}`)
+    axios(`http://localhost:5000/articles/${userId}`)
     .then((result)=>{
       let articles = result.data;
       // console.log(articles);
@@ -43,7 +43,7 @@ export default class Deck extends React.Component {
     let userId = this.props.navigation.getParam('userId' , 56);
     let article_id = article.id;
     console.log("[DECK] Article Swipe Right ID : ", article_id);
-    axios.post(`http://10.2.20.155:5000/like`,{
+    axios.post(`http://localhost:5000/like`,{
       article_id : article_id,
       userId : userId
     })
@@ -58,7 +58,7 @@ export default class Deck extends React.Component {
     let userId = this.props.navigation.getParam('userId' , 56);
     let article_id = article.id;
     console.log("[DECK] Article Swipe Right ID : ", article_id);
-    axios.post(`http://10.2.20.155:5000/dislike`,{
+    axios.post(`http://localhost:5000/dislike`,{
       article_id : article_id,
       userId : userId
     })
@@ -96,7 +96,7 @@ export default class Deck extends React.Component {
     if(articles === undefined){
       let userId = this.props.navigation.getParam('userId' , 56);
       console.log("[DECK] User Id : ", userId);
-      axios(`http://10.2.20.155:5000/articles/${userId}`)
+      axios(`http://localhost:5000/articles/${userId}`)
       .then((result)=>{
         let articles = result.data;
         this.setState({articles});
